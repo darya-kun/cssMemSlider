@@ -1,12 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>CSS Mem Slider</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="icon" href="fav.ico"> -->
+    <title>CSS Mem Slider</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <main class="main">
+      <section class="slider">
+        <h1 class="slider__title">CSS Mem Slider</h1>
+        <div class="slider-wrapper"> 
+          <input class="radio" type="radio" name="slider" id="slide1" checked>
+          <input class="radio" type="radio" name="slider" id="slide2">
+          <input class="radio" type="radio" name="slider" id="slide3">
+          <input class="radio" type="radio" name="slider" id="slide4">
+    
+          <div class="slides">
+            <div class="slides__wrapper">
+              <img class="slides__img" src="./assets/mem-1.jpeg" alt="mem">
+              <img class="slides__img" src="./assets/mem-2.jpeg" alt="mem">
+              <img class="slides__img" src="./assets/mem-3.jpeg" alt="mem">
+              <img class="slides__img" src="./assets/mem-4.jpeg" alt="mem">
+            </div>
+          </div>
+    
+          <div class="content">
+            <div class="content__wrapper">
+              <div class="content__text">
+                <p>Nobody's gonna know... They're gonna know 🤫</p>
+                <p>Am I the only one who fully agree with it? 😬</p>
+                <p>After the museum task 🤯</p>
+                <p>Sad but true 😰 This is the way</p>
+              </div>
+            </div>
+    
+            <div class="controls">
+              <label for="slide1">
+                <div class="controls__item"></div>
+              </label>
+              <label for="slide2">
+                <div class="controls__item"></div>
+              </label>
+              <label for="slide3">
+                <div class="controls__item"></div>
+              </label>
+              <label for="slide4">
+                <div class="controls__item"></div>
+              </label>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
