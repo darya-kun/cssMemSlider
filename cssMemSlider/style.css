@@ -8,9 +8,12 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, sans-serif;
-  background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+  background: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   /* background:  #008793; */
-  height: 100vh;
 }
 
 .slider {
