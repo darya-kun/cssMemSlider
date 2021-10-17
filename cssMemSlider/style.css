@@ -175,7 +175,7 @@ body {
 
 @media (max-width: 420px) {
   .slider {
-    max-width: 370px;
+    max-width: 290px;
   }
   .slider-wrapper {
     padding: 1em 1em .5em;
