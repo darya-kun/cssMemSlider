@@ -157,10 +157,20 @@ body {
   :root {
     font-size: 12px;
   }
+  .content {
+    flex-direction: column-reverse;
+  }
+  .content p {
+    text-align: center;
+  }
+  .controls {
+    margin-bottom: 1rem;
+  }
 }
 
 @media (max-width: 420px) {
   :root {
     font-size: 8px;
   }
+  
 }
