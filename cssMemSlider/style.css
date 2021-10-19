@@ -1,0 +1,176 @@
+:root {
+  font-size: 16px;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  /* background:  #008793; */
+}
+
+.slider {
+  max-width: 42rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.slider__title {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.slider-wrapper {
+  padding: 2rem;
+  border-radius: 2%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.radio {
+  display: none;
+}
+
+.slides {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.slides__wrapper {
+  width: calc(100% * 4);
+  height: 100%;
+  display: flex;
+
+  line-height: 0;
+  margin-left: 0;
+  transition: margin-left .8s cubic-bezier(0.770, 0.000, 0.175, 1.000);
+}
+
+.slides__img {
+  width: calc(100% / 4);
+  /* max-height: 43em;
+  height: 100%; */
+  object-fit: fill;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content__wrapper {
+  width: 50%;
+  overflow: hidden;
+}
+
+.content__text {
+  display: flex;
+  width: calc(100% * 4);
+  margin-left: 0;
+  /* height: 100%; */
+  transition: margin-left .8s cubic-bezier(0.770, 0.000, 0.175, 1.000);
+}
+
+.content__text p {
+  width: calc(100% / 4);
+  padding-left: 0.1rem;
+  font-size: 1rem;
+  line-height: 1.1rem;
+  color: #ffffff;
+}
+
+.controls label {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.controls__item {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  margin: 0 .5rem;
+  border-radius: 50%;
+  background-color: #e6e6e6;
+  opacity: .7;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.controls label:hover .controls__item {
+  border-color: #fff !important;
+  opacity: 1;
+}
+
+#slide1:checked ~ .content .controls label:nth-child(1) .controls__item,
+#slide2:checked ~ .content .controls label:nth-child(2) .controls__item,
+#slide3:checked ~ .content .controls label:nth-child(3) .controls__item,
+#slide4:checked ~ .content .controls label:nth-child(4) .controls__item{
+  border: 1px solid #fff;
+  background: transparent !important;
+  opacity: 1;
+}
+
+
+/* *Сдвигаем слайды и текст */
+#slide1:checked ~ .slides .slides__wrapper,
+#slide1:checked ~ .content .content__wrapper .content__text {
+  margin-left: 0;
+}
+
+#slide2:checked ~ .slides .slides__wrapper,
+#slide2:checked ~ .content .content__wrapper .content__text {
+  margin-left: -100%;
+}
+
+#slide3:checked ~ .slides .slides__wrapper,
+#slide3:checked ~ .content .content__wrapper .content__text {
+  margin-left: -200%;
+}
+
+#slide4:checked ~ .slides .slides__wrapper,
+#slide4:checked ~ .content .content__wrapper .content__text {
+  margin-left: -300%;
+}
+
+
+/* *Media queries */
+@media (max-width: 768px) {
+  :root {
+    font-size: 12px;
+  }
+  .content {
+    flex-direction: column-reverse;
+  }
+  .content p {
+    text-align: center;
+  }
+  .controls {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 420px) {
+  :root {
+    font-size: 8px;
+  }
+  
+}
